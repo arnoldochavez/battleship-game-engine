@@ -11,7 +11,7 @@
         "useCollapsibles": true
     },
     "source": {
-        "include": ["./src/"],
+        "include": ["./README.md", "./src/"],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"
     },
