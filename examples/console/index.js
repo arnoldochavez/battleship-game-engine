@@ -58,7 +58,7 @@ function startTurn() {
     console.log('Player turn');
     console.log('Invoke "shoot(x, y)"');
   } catch (e) {
-    if (e == Error.NOT_IN_GAMESTATE) {
+    if (e == BGE.Error.NOT_IN_GAMESTATE) {
       console.log('You can not invoke this right now');
     }
     else {
@@ -85,17 +85,17 @@ function place(type, x, y, orientation) {
       console.log('This place is invalid or already occupied');
     }
   } catch (e) {
-    if (e == Error.PIECE_TYPE_INVALID) {
+    if (e == BGE.Error.PIECE_TYPE_INVALID) {
       console.log('Invalid piece');
     }
-    else if (e == Error.NO_PIECE_AVAIBLE) {
+    else if (e == BGE.Error.NO_PIECE_AVAIBLE) {
       _placeMsg();
       console.log('No more of those pieces to place');
     }
-    else if (e == Error.OUT_OF_BOUNDS) {
+    else if (e == BGE.Error.OUT_OF_BOUNDS) {
       console.log('Position out of the grid');
     }
-    else if (e == Error.NOT_IN_GAMESTATE) {
+    else if (e == BGE.Error.NOT_IN_GAMESTATE) {
       console.log('Can not place pieces in this moment');
     }
     else {
@@ -111,15 +111,15 @@ function shoot(x, y) {
     playerShootResult = game.shoot(x, y);
   }
   catch (e) {
-    if (e == Error.ALREADY_SHOOT) {
+    if (e == BGE.Error.ALREADY_SHOOT) {
       game.playerBoard.print();
       console.log('That position has been already shoot');
     }
-    else if (e == Error.OUT_OF_BOUNDS) {
+    else if (e == BGE.Error.OUT_OF_BOUNDS) {
       game.playerBoard.print();
       console.log('The position is out of bounds');
     }
-    else if (e == Error.NOT_IN_GAMESTATE) {
+    else if (e == BGE.Error.NOT_IN_GAMESTATE) {
       console.log('You can not invoke this right now');
     }
     else {
