@@ -1,0 +1,27 @@
+{
+    "plugins": [],
+    "templates": {
+        "systemName": "Battleship Game Engine",
+        "cleverLinks": true,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": false
+        },
+        "name": "BGE API documentation",
+        "useCollapsibles": true
+    },
+    "source": {
+        "include": ["./src/"],
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "opts": {
+        "encoding": "utf8",
+        "recurse": true,
+        "destination": "docs",
+        "template": "node_modules/clean-jsdoc-theme",
+        "theme_opts": {
+            "theme": "dark"
+        }
+    }
+}

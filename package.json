@@ -1,0 +1,26 @@
+{
+  "name": "battleship-game-engine",
+  "version": "1.0.0",
+  "description": "Easily make your own battleship game with this game engine",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run rollup && npm run minify && ncp dist/bge.min.js examples/console/bge.min.js",
+    "rollup": "rollup --config",
+    "minify": "terser dist/bge.js --compress --mangle --output dist/bge.min.js",
+    "generate-docs": "jsdoc -c jsdoc.config.json"
+  },
+  "keywords": [
+    "Battleship",
+    "Game",
+    "Engine"
+  ],
+  "author": "Arnoldo Chavez",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-jsdoc-theme": "^3.3.4",
+    "jsdoc": "^3.6.10",
+    "ncp": "^2.0.0",
+    "rollup": "^2.73.0",
+    "terser": "^5.13.1"
+  }
+}

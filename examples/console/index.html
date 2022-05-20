@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Battleship Game Engine</title>
+</head>
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: blueviolet;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+        margin: 0;
+        font-family: sans-serif;
+        color: white;
+    }
+
+    h3 {
+        margin: 32px;
+        padding: 32px;
+        max-width: 400px;
+        border: 2px solid white;
+    }
+
+    div {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background-color: white;
+    }
+
+    div::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: -15px;
+        transform: rotate(135deg);
+        border: 30px solid white;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+</style>
+
+<body>
+    <h2>WELCOME TO</h2>
+    <h1>🚢 BATTLESHIP GAME ENGINE 🚢</h1>
+    <h3>This example was made to be played in the web console, so to play the game you need to open the Console and follow the instructions.</h3>
+    <div></div>
+    <script src="bge.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
